@@ -42,6 +42,19 @@ public extension Geometry {
         }
         return nil
     }
+    
+    /**
+    Creates an `Array` of `Geometry` instances from a GeoJSON dictionary.
+    
+    :param: dictionary a dictionary following GeoJSON format specification.
+    
+    :returns: An optional `Array` of `Geometry` instances.
+    */
+    public class func fromGeoJSONDictionary(dictionary: Dictionary<String, AnyObject>) -> Array<Geometry>? {
+        var parseError: NSError?
+
+        return ParseGEOJSONObject(dictionary)
+    }
 }
 
 // MARK: - Private parsing functions
