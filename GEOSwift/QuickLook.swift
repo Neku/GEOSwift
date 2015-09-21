@@ -39,7 +39,7 @@ public extension Geometry {
         mapView.frame = CGRectMake(0, 0, 400, 400)
         mapView.region = region
         
-        let options = MKMapSnapshotOptions.new()
+        let options = MKMapSnapshotOptions()
         options.region = mapView.region
         options.scale = UIScreen.mainScreen().scale
         options.size = mapView.frame.size
@@ -144,7 +144,7 @@ extension LineString : GEOSwiftQuickLook {
             let upperCorner = renderer.mapPointForPoint(CGPointZero)
             CGContextTranslateCTM(context, CGFloat(upperCorner.x - mapRect.origin.x), CGFloat(upperCorner.y - mapRect.origin.y));
             
-            renderer.drawMapRect(mapRect, zoomScale: zoomScale, inContext: context)
+            renderer.drawMapRect(mapRect, zoomScale: zoomScale, inContext: context!)
             CGContextRestoreGState(context);
         }
     }
@@ -168,7 +168,7 @@ extension Polygon : GEOSwiftQuickLook {
             let upperCorner = polygonRenderer.mapPointForPoint(CGPointZero)
             CGContextTranslateCTM(context, CGFloat(upperCorner.x - mapRect.origin.x), CGFloat(upperCorner.y - mapRect.origin.y));
             
-            polygonRenderer.drawMapRect(mapRect, zoomScale: zoomScale, inContext: context)
+            polygonRenderer.drawMapRect(mapRect, zoomScale: zoomScale, inContext: context!)
             CGContextRestoreGState(context);
         }
     }

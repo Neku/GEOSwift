@@ -13,7 +13,6 @@
 		CD20F1DF1B283F580045D8FD /* SpatialRelations.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20F1DE1B283F580045D8FD /* SpatialRelations.swift */; };
 		CD20F1E11B2844210045D8FD /* Geometries.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD20F1E01B2844210045D8FD /* Geometries.swift */; };
 		CD22998F1B10B506002C19AE /* GEOSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CD2299841B10B506002C19AE /* GEOSwift.framework */; };
-		CD2299981B10B506002C19AE /* GEOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD2299971B10B506002C19AE /* GEOSTests.swift */; };
 		CD25D72F1B2732FE008B3FB3 /* GeoJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD25D7251B2732FE008B3FB3 /* GeoJSON.swift */; };
 		CD25D7301B2732FE008B3FB3 /* GEOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD25D7261B2732FE008B3FB3 /* GEOS.swift */; };
 		CD25D7331B2732FE008B3FB3 /* GEOSwiftCallback.h in Headers */ = {isa = PBXBuildFile; fileRef = CD25D7291B2732FE008B3FB3 /* GEOSwiftCallback.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -68,7 +67,6 @@
 		CD2299871B10B506002C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; name = Info.plist; path = ../Humboldt.bak/Humboldt/Info.plist; sourceTree = "<group>"; };
 		CD22998E1B10B506002C19AE /* GEOSwiftTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEOSwiftTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD2299961B10B506002C19AE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		CD2299971B10B506002C19AE /* GEOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEOSTests.swift; sourceTree = "<group>"; };
 		CD25D7251B2732FE008B3FB3 /* GeoJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoJSON.swift; sourceTree = "<group>"; };
 		CD25D7261B2732FE008B3FB3 /* GEOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GEOS.swift; sourceTree = "<group>"; };
 		CD25D7271B2732FE008B3FB3 /* GEOSwift-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "GEOSwift-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -143,7 +141,6 @@
 		CD2299941B10B506002C19AE /* GEOSwiftTests */ = {
 			isa = PBXGroup;
 			children = (
-				CD2299971B10B506002C19AE /* GEOSTests.swift */,
 				CDB7EC041B287CE70055835C /* MapKitTests.swift */,
 				CDB71B3B1B16210C0044B3DD /* multipolygon.geojson */,
 				CDB0A9D51B21A5FD00AB2F46 /* geometrycollection.geojson */,
@@ -463,7 +460,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CD2299981B10B506002C19AE /* GEOSTests.swift in Sources */,
 				CDB7EC051B287CE70055835C /* MapKitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -483,6 +479,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 20502951D700E13BF0D03965 /* Pods.debug.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -508,6 +505,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = F11A4EEE11BBEA6574C3B06D /* Pods.release.xcconfig */;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
