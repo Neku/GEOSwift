@@ -88,8 +88,8 @@ if let geoJSONURL = NSBundle.mainBundle().URLForResource("multipolygon", withExt
     italy.pointOnSurface()
     italy.intersection(geometry2!)
     italy.difference(geometry2!)
-    italy.union(geometry2!)    
-
+    italy.union(geometry2!)
+    
 //: ### Predicates:
 //: 
     italy.disjoint(geometry2!)
